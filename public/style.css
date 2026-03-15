@@ -1,0 +1,141 @@
+ body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2f3136;
+    margin: 0;
+    padding: 40px 20px;
+    color: #fff;
+  }
+
+  h1 {
+    text-align: center;
+    color: #7289da;
+    margin-bottom: 20px;
+  }
+
+  .lista-servidores {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .servidor, .adicionar-servidor {
+    background-color: #36393f;
+    border-radius: 10px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+  }
+
+  .servidor:hover, .adicionar-servidor:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+
+  .servidor img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 2px solid #7289da;
+  }
+
+  .servidor-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .servidor-info h2 {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .servidor-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #b9bbbe;
+  }
+
+  .btn-entrar {
+    background-color: #7289da;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-entrar:hover {
+    background-color: #5b6eae;
+    transform: scale(1.05);
+  }
+
+  .adicionar-servidor {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #b9bbbe;
+    font-weight: bold;
+  }
+
+  .form-adicionar {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .form-adicionar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #7289da;
+    background-color: #2f3136;
+    color: #fff;
+  }
+
+  .form-adicionar input::placeholder {
+    color: #b9bbbe;
+  }
+
+  .form-adicionar button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .form-adicionar button:hover {
+    background-color: #e65500;
+    transform: scale(1.05);
+  }
+
+  @media(max-width: 600px){
+    .servidor, .adicionar-servidor {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .servidor img {
+      margin-bottom: 10px;
+    }
+
+    .btn-entrar {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
